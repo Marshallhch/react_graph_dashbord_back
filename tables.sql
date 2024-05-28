@@ -16,3 +16,22 @@ CREATE TABLE customers(
   create_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
   update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
 )
+
+CREATE TABLE revenue(
+  id SERIAL PRIMARY KEY NOT NULL,
+  day VARCHAR(30) NOT NULL,
+  online INTEGER NOT NULL,
+  offline INTEGER NOT NULL,
+  create_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+)
+
+INSERT INTO revenue (day, online, offline) 
+VALUES 
+('Mon', 14, 12.5),
+('Tue', 17, 12),
+('Wen', 6, 23),
+('Thu', 16, 7),
+('Fri', 13, 12),
+('Sat', 17, 13),
+('Sun', 21, 12)
